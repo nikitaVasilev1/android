@@ -1,12 +1,11 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("SuspiciousIndentation")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
         super.onCreate(savedInstanceState)
@@ -36,8 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             repost.setOnClickListener {
-                post.repostByMe = !post.repostByMe
-                if (post.repostByMe) post.reposts += 10 else post.reposts -= 10
+                 post.reposts += 10
                 repostText.text = post.numberOfReactrion(post.reposts)
 
             }

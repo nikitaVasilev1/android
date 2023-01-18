@@ -10,7 +10,7 @@ data class Post(
     val published: String,
     var likes: Int = 0,
     var reposts: Int = 0,
-    var likedByMe: Boolean = false,
+    var likedByMe: Boolean = false
 ) {
     fun numberOfReactrion(count: Int): String {
         var print: String
